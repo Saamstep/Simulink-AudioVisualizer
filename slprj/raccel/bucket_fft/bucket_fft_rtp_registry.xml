@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_rtp/R2023a">
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="7b5ae0f2-ce23-49cf-be8f-21a27be2e359">
+    <parameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="3e4a0835-e117-42d7-ba8a-0e0d07331487"/>
+    <valueIndices>2</valueIndices>
+    <valueIndices>2</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="f7b732ce-af61-40ae-95a5-5b9381c1c1be">
+    <blockPath>bucket_fft/Audio Device Reader</blockPath>
+    <name>P1</name>
+    <parameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="3e4a0835-e117-42d7-ba8a-0e0d07331487"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.SFunctionParameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="3e4a0835-e117-42d7-ba8a-0e0d07331487">
+    <isInlined>true</isInlined>
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="f7b732ce-af61-40ae-95a5-5b9381c1c1be"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="7b5ae0f2-ce23-49cf-be8f-21a27be2e359"/>
+  </slsa.mm.param.rtp.SFunctionParameter>
+  <slsa.mm.param.rtp.ModelMetadata type="slsa.mm.param.rtp.ModelMetadata" uuid="9d6ff8ed-1b3f-4f32-8c32-a2e0f6b8c7f4">
+    <modelName>bucket_fft</modelName>
+  </slsa.mm.param.rtp.ModelMetadata>
+</MF0>

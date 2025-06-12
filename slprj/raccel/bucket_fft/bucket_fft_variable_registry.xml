@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="afe0ffc9-e7ac-48dc-a274-1cb23f55386c">
+    <blockParameters type="slsa.mm.param.graph.BlockParameter" uuid="0e0afd89-24d5-45c1-bd86-c4f5a73ff3c8">
+      <blockPath>bucket_fft/Buffer</blockPath>
+      <parameterName>N</parameterName>
+      <expression type="slsa.mm.param.graph.Expression" uuid="19361d12-4df0-4ebe-9dfd-4a961adca53a"/>
+      <tunabilityType>Nontunable</tunabilityType>
+    </blockParameters>
+    <blockParameters type="slsa.mm.param.graph.BlockParameter" uuid="8873b61f-fe22-43e4-b4f6-5486171afcd5">
+      <blockPath>bucket_fft/Audio Device Reader</blockPath>
+      <parameterName>P1</parameterName>
+      <expression type="slsa.mm.param.graph.Expression" uuid="3581bc1c-310f-4eb9-aae6-c203a3281c01"/>
+      <valueAttributes type="slsa.mm.param.graph.ValueAttributes" uuid="20480e3f-c782-4b32-9ad5-a387263447b3">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <expressions type="slsa.mm.param.graph.Expression" uuid="19361d12-4df0-4ebe-9dfd-4a961adca53a">
+      <expression>fft_len</expression>
+      <users type="slsa.mm.param.graph.BlockParameter" uuid="0e0afd89-24d5-45c1-bd86-c4f5a73ff3c8"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="09e98fb2-c71d-4a0b-b308-18acb917746f"/>
+    </expressions>
+    <expressions type="slsa.mm.param.graph.Expression" uuid="3581bc1c-310f-4eb9-aae6-c203a3281c01">
+      <expression>SampleRate</expression>
+      <users type="slsa.mm.param.graph.BlockParameter" uuid="8873b61f-fe22-43e4-b4f6-5486171afcd5"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="9f2bd53f-b8b2-46f7-bc7c-8935a8a2084b"/>
+    </expressions>
+    <expressions type="slsa.mm.param.graph.Expression" uuid="9d95e210-466b-4770-b3e6-420c1cd850ed">
+      <expression>44100</expression>
+      <users type="slsa.mm.param.graph.VariableDefinition" uuid="286beeb3-dbdf-4fcd-bc7f-158a149f31c9"/>
+    </expressions>
+    <name>bucket_fft</name>
+    <variableDefinitions type="slsa.mm.param.graph.VariableDefinition" uuid="286beeb3-dbdf-4fcd-bc7f-158a149f31c9">
+      <variable type="slsa.mm.param.graph.Variable" uuid="9f2bd53f-b8b2-46f7-bc7c-8935a8a2084b"/>
+      <expression type="slsa.mm.param.graph.Expression" uuid="9d95e210-466b-4770-b3e6-420c1cd850ed"/>
+      <tunabilityType>Nontunable</tunabilityType>
+    </variableDefinitions>
+    <variables type="slsa.mm.param.graph.Variable" uuid="09e98fb2-c71d-4a0b-b308-18acb917746f">
+      <expressions type="slsa.mm.param.graph.Expression" uuid="19361d12-4df0-4ebe-9dfd-4a961adca53a"/>
+      <name>fft_len</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="a001f173-29e7-44de-a0e2-ef5e8728fef5"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="9f2bd53f-b8b2-46f7-bc7c-8935a8a2084b">
+      <definition type="slsa.mm.param.graph.VariableDefinition" uuid="286beeb3-dbdf-4fcd-bc7f-158a149f31c9"/>
+      <expressions type="slsa.mm.param.graph.Expression" uuid="3581bc1c-310f-4eb9-aae6-c203a3281c01"/>
+      <name>SampleRate</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="0c720ae9-875f-4b87-847d-9f622d41ee3d"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="a001f173-29e7-44de-a0e2-ef5e8728fef5">
+      <name>bucket_fft</name>
+      <type>MODEL</type>
+      <variables type="slsa.mm.param.graph.Variable" uuid="09e98fb2-c71d-4a0b-b308-18acb917746f"/>
+    </workspaces>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="0c720ae9-875f-4b87-847d-9f622d41ee3d">
+      <name>bucket_fft:1</name>
+      <type>MASK</type>
+      <variables type="slsa.mm.param.graph.Variable" uuid="9f2bd53f-b8b2-46f7-bc7c-8935a8a2084b"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="a0527966-d498-4982-8417-73fd0e7114a7"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>
