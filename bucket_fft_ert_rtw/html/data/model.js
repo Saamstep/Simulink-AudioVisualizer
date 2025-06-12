@@ -1,0 +1,1 @@
+var modelInfo = {model:"bucket_fft"};var modelHierarchy=[{model:"bucket_fft",relativePath:"_internal.html",parent:"null"},];var AddCode = true;var ProtectedModel = false;
